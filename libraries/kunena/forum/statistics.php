@@ -248,6 +248,10 @@ class KunenaForumStatistics
 	{
 		$limit = $limit ? $limit : $this->_config->popsubjectcount;
 
+		if (!is_array($this->topTopics)) {
+			$this->topTopics = [];
+		}
+
 		if (count($this->topTopics) < $limit)
 		{
 			$params = array('orderby'=>'posts DESC');
@@ -285,6 +289,10 @@ class KunenaForumStatistics
 	{
 		$limit = $limit ? $limit : $this->_config->popusercount;
 
+		if (!is_array($this->topPosters)) {
+			$this->topPosters = [];
+		}
+
 		if (count($this->topPosters) < $limit)
 		{
 			$this->topPosters = KunenaUserHelper::getTopPosters($limit);
@@ -320,6 +328,10 @@ class KunenaForumStatistics
 	{
 		$limit = $limit ? $limit : $this->_config->popusercount;
 
+		if (!is_array($this->topProfiles)) {
+			$this->topProfiles = [];
+		}
+
 		if (count($this->topProfiles) < $limit)
 		{
 			$this->topProfiles = KunenaFactory::getProfile()->getTopHits($limit);
@@ -354,6 +366,10 @@ class KunenaForumStatistics
 	public function loadTopPolls($limit = 0)
 	{
 		$limit = $limit ? $limit : $this->_config->poppollscount;
+
+		if (!is_array($this->topPolls)) {
+			$this->topPolls = [];
+		}
 
 		if (count($this->topPolls) < $limit)
 		{
@@ -400,6 +416,10 @@ class KunenaForumStatistics
 	public function loadTopThankyous($limit = 0)
 	{
 		$limit = $limit ? $limit : $this->_config->popthankscount;
+
+		if (!is_array($this->topThanks)) {
+			$this->topThanks = [];
+		}
 
 		if (count($this->topThanks) < $limit)
 		{

@@ -250,6 +250,10 @@ abstract class KunenaUserHelper
 	{
 		$limit = $limit ? $limit : KunenaFactory::getConfig()->popusercount;
 
+		if (!is_array(self::$_topposters)) {
+			self::$_topposters = array();
+		}
+
 		if (count(self::$_topposters) < $limit)
 		{
 			$db = JFactory::getDBO ();

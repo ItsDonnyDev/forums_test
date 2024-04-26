@@ -96,7 +96,7 @@ abstract class KunenaMenuHelper
 					{
 						case 'separator':
 							// No further action needed.
-							continue;
+							break;
 
 						case 'url':
 							if ((strpos($item->link, 'index.php?') === 0) && (strpos($item->link, 'Itemid=') === false))

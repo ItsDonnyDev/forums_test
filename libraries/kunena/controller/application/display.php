@@ -236,11 +236,6 @@ class KunenaControllerApplicationDisplay extends KunenaControllerDisplay
 		JResponse::setHeader( 'Last-Modified', gmdate("D, d M Y H:i:s") . ' GMT', true );
 		JResponse::setHeader( 'Cache-Control', 'no-store, must-revalidate, post-check=0, pre-check=0', true );
 
-		if ($this->config->get('credits', 1))
-		{
-			$this->output->appendAfter($this->poweredBy());
-		}
-
 		KUNENA_PROFILER ? KunenaProfiler::instance()->stop('function '.get_class($this).'::'.__FUNCTION__.'()') : null;
 	}
 
@@ -269,26 +264,5 @@ class KunenaControllerApplicationDisplay extends KunenaControllerDisplay
 			default:
 				JResponse::setHeader('Status', '500 Internal Server Error', true);
 		}
-	}
-
-	final public function poweredBy()
-	{
-		$templateText = (string) $this->template->params->get('templatebyText');
-		$templateName = (string) $this->template->params->get('templatebyName');
-		$templateLink = (string) $this->template->params->get('templatebyLink');
-		$credits = '<div style="text-align:center">';
-		$credits .= JHtml::_('kunenaforum.link', 'index.php?option=com_kunena&view=credits',
-			JText::_('COM_KUNENA_POWEREDBY'), '', '', 'follow',
-			array('style'=>'display: inline; visibility: visible; text-decoration: none;'));
-		$credits .= ' <a href="https://www.kunena.org" rel="follow"
-			target="_blank" style="display: inline; visibility: visible; text-decoration: none;">'
-			. JText::_('COM_KUNENA').'</a>';
-		if (trim($templateText)) {
-			$credits .= ' :: <a href ="'. $templateLink. '" rel="follow" target="_blank" style="text-decoration: none;">'
-				. $templateText .' '. $templateName .'</a>';
-		}
-		$credits .= '</div>';
-
-		return $credits;
 	}
 }

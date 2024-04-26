@@ -493,7 +493,7 @@ class KunenaBbcodeEditorButton extends KunenaBbcodeEditorElement
 					// <display name="kbbcode-color-options" />
 					if (!$tag)
 					{
-						continue;
+						break;
 					}
 
 					if ($action['selection'])
@@ -508,7 +508,7 @@ class KunenaBbcodeEditorButton extends KunenaBbcodeEditorElement
 					// <wrap-selection />
 					if (!$tag)
 					{
-						continue;
+						break;
 					}
 
 					if (!$action['repeat'])

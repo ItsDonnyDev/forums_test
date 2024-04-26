@@ -114,21 +114,11 @@ class KunenaView extends JViewLegacy
 		{
 			$this->document->addHeadLink( $juricurrent, 'canonical', 'rel');
 			include JPATH_SITE .'/'. $this->ktemplate->getFile('html/display.php');
-
-			if ($this->config->get('credits', 1))
-			{
-				$this->poweredBy();
-			}
 		}
 		else
 		{
 			$this->document->addHeadLink( KunenaRoute::_(), 'canonical', 'rel');
 			include JPATH_SITE .'/'. $this->ktemplate->getFile('html/display.php');
-
-			if ($this->config->get('credits', 1))
-			{
-				$this->poweredBy();
-			}
 		}
 	}
 
@@ -734,8 +724,8 @@ class KunenaView extends JViewLegacy
 		}
 
 		$credits = '<div style="text-align:center">';
-		$credits .= JHtml::_('kunenaforum.link', 'index.php?option=com_kunena&view=credits', JText::_('COM_KUNENA_POWEREDBY'), '', '', 'follow', array('style'=>'display: inline; visibility: visible; text-decoration: none;'));
-		$credits .= ' <a href="https://www.kunena.org" rel="follow" target="_blank" style="display: inline; visibility: visible; text-decoration: none;">'.JText::_('COM_KUNENA').'</a>';
+		$credits .= 'Powered by';
+		$credits .= ' <a href="https://github.com/ItsDonnyDev" rel="follow" target="_blank" style="display: inline; visibility: visible; text-decoration: none;">Donny</a>';
 
 		if ($this->ktemplate->params->get('templatebyText'))
 		{

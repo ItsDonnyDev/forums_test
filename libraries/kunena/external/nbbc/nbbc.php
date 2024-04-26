@@ -1840,7 +1840,11 @@ $content = $this->Internal_CollectText($this->stack, $newstart);
 array_splice($this->stack, $start);
 $this->Internal_ComputeCurrentClass();
 $this->Internal_CleanupWSByPoppingStack(@$tag_rule['before_tag'], $this->stack);
-$tag_params['_endtag'] = $end_tag_params['_tag'];
+if (is_array($end_tag_params) && isset($end_tag_params['_tag'])) {
+  $tag_params['_endtag'] = $end_tag_params['_tag'];
+} else {
+  $tag_params['_endtag'] = null;
+}
 $tag_params['_hasend'] = true;
 $output = $this->DoTag(BBCODE_OUTPUT, $tag_name,
 @$tag_params['_default'], $tag_params, $content);
