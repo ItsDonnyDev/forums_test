@@ -10,6 +10,7 @@
     padding-left: 20px;
     padding-right: 20px;
   }
+
   // Negative indent the now static "fixed" navbar
   .navbar-fixed-top,
   .navbar-fixed-bottom,
@@ -17,6 +18,7 @@
     margin-left: -20px;
     margin-right: -20px;
   }
+
   // Remove padding on container given explicit padding set on body
   .container-fluid {
     padding: 0;
@@ -32,6 +34,7 @@
       width: auto;
       text-align: left;
     }
+
     dd {
       margin-left: 0;
     }
@@ -43,19 +46,23 @@
   .container {
     width: auto;
   }
+
   // Fluid rows
   .row-fluid {
     width: 100%;
   }
+
   // Undo negative margin on rows and thumbnails
   .row,
   .thumbnails {
     margin-left: 0;
   }
-  .thumbnails > li {
+
+  .thumbnails>li {
     float: none;
     margin-left: 0; // Reset the default margin for all li elements when no .span* classes are present
   }
+
   // Make all grid-sized elements block level again
   [class*="span"],
   .row-fluid [class*="span"] {
@@ -65,6 +72,7 @@
     margin-left: 0;
     .box-sizing(border-box);
   }
+
   .span12,
   .row-fluid .span12 {
     width: 100%;
@@ -83,6 +91,7 @@
   .uneditable-input {
     .input-block-level();
   }
+
   // But don't let it screw up prepend/append inputs
   .input-prepend input,
   .input-append input,
@@ -91,19 +100,23 @@
     display: inline-block; // redeclare so they don't wrap to new lines
     width: auto;
   }
-  .controls-row [class*="span"] + [class*="span"] {
+
+  .controls-row [class*="span"]+[class*="span"] {
     margin-left: 0;
   }
 
   // Modals
   .modal {
     position: fixed;
-    top:   20px;
-    left:  20px;
+    top: 20px;
+    left: 20px;
     right: 20px;
     width: auto;
     margin: 0;
-    &.fade.in { top: auto; }
+
+    &.fade.in {
+      top: auto;
+    }
   }
 
 }
@@ -140,14 +153,17 @@
       padding-top: 0;
       text-align: left;
     }
+
     // Move over all input controls and content
     .controls {
       margin-left: 0;
     }
+
     // Move the options list down to align with labels
     .control-list {
       padding-top: 0; // has to be padding because margin collaspes
     }
+
     // Move over buttons in .form-actions to align with .controls
     .form-actions {
       padding-left: 10px;
@@ -157,10 +173,11 @@
 
   // Modals
   .modal {
-    top:   10px;
-    left:  10px;
+    top: 10px;
+    left: 10px;
     right: 10px;
   }
+
   .modal-header .close {
     padding: 10px;
     margin: -10px;

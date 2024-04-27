@@ -716,27 +716,6 @@ class KunenaView extends JViewLegacy
 		return $output;
 	}
 
-	final public function poweredBy()
-	{
-		if ($this->inLayout)
-		{
-			throw new LogicException(sprintf('HMVC template should not call %s::%s()', __CLASS__, __FUNCTION__));
-		}
-
-		$credits = '<div style="text-align:center">';
-		$credits .= 'Powered by';
-		$credits .= ' <a href="https://github.com/ItsDonnyDev" rel="follow" target="_blank" style="display: inline; visibility: visible; text-decoration: none;">Donny</a>';
-
-		if ($this->ktemplate->params->get('templatebyText'))
-		{
-			$credits .= ' :: <a href ="'. $this->ktemplate->params->get('templatebyLink').'" rel="follow" target="_blank" style="text-decoration: none;">' . $this->ktemplate->params->get('templatebyText') .' '. $this->ktemplate->params->get('templatebyName') .'</a>';
-		}
-
-		$credits .= '</div>';
-
-		echo $credits;
-	}
-
 	// Caching
 	public function getTemplateMD5()
 	{

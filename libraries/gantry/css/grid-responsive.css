@@ -13,12 +13,12 @@ body [class*="rt-grid"] {
 	display: inline;
 	float: left;
 	position: relative;
-	margin: 0;
+	margin: 0 auto;
 }
 
 .rt-container {
 	width: 1200px;
-	margin: 0 auto;
+	margin: 0 auto -50px auto;
 }
 
 .rt-grid-1 {

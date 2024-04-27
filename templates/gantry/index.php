@@ -37,9 +37,9 @@ $gpreset = str_replace(' ','',strtolower($gantry->get('name')));
 		$gantry->addStyle('grid-responsive.css', 5);
 		$gantry->addLess('bootstrap.less', 'bootstrap.css', 6);
         if ($gantry->browser->name == 'ie'){
-        	if ($gantry->browser->shortversion == 9){
-        		$gantry->addInlineScript("if (typeof RokMediaQueries !== 'undefined') window.addEvent('domready', function(){ RokMediaQueries._fireEvent(RokMediaQueries.getQuery()); });");
-        	}
+			if ($gantry->browser->shortversion == 9){
+				$gantry->addInlineScript("if (typeof RokMediaQueries !== 'undefined') window.addEvent('domready', function(){ RokMediaQueries._fireEvent(RokMediaQueries.getQuery()); });");
+			}
 			if ($gantry->browser->shortversion == 8){
 				$gantry->addScript('html5shim.js');
 			}
@@ -173,7 +173,7 @@ $gpreset = str_replace(' ','',strtolower($gantry->get('name')));
 		<?php /** End Footer **/ endif; ?>
 		<?php /** Begin Copyright **/ if ($gantry->countModules('copyright')) : ?>
 		<div id="rt-copyright">
-			<div class="rt-container" style="text-align: center; font-size: larger; margin-top: 20px; margin-bottom: 20px;">
+			<div class="rt-container" style="text-align: center; padding-top: 35px; margin-bottom: -35px; font-size: larger;">
 				<?php echo 'Powered by <a href="https://github.com/ItsDonnyDev" rel="follow" target="_blank">Donny</a>'; ?>
 				<div class="clear"></div>
 			</div>
