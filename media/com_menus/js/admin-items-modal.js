@@ -2,7 +2,7 @@
  * @copyright  (C) 2017 Open Source Matters, Inc. <https://www.joomla.org>
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
  */
-(function() {
+(function () {
 	"use strict";
 	/**
 	 * Javascript to insert the link
@@ -11,8 +11,7 @@
 	 * and closes the select frame.
 	 */
 
-	window.jSelectMenuItem = function(id, title, uri, object, link, lang)
-	{
+	window.jSelectMenuItem = function (id, title, uri, object, link, lang) {
 		var thislang = '', tag, editor;
 
 		if (!Joomla.getOptions('xtd-menus')) {
@@ -23,8 +22,7 @@
 
 		editor = Joomla.getOptions('xtd-menus').editor;
 
-		if (lang !== '')
-		{
+		if (lang !== '') {
 			thislang = '&lang=';
 		}
 
@@ -44,11 +42,11 @@
 		window.parent.jModalClose();
 	};
 
-	document.addEventListener('DOMContentLoaded', function(){
+	document.addEventListener('DOMContentLoaded', function () {
 		// Get the elements
 		var elements = document.querySelectorAll('.select-link');
 
-		for(var i = 0, l = elements.length; l>i; i++) {
+		for (var i = 0, l = elements.length; l > i; i++) {
 			// Listen for click event
 			elements[i].addEventListener('click', function (event) {
 				event.preventDefault();

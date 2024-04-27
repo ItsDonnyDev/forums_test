@@ -3569,6 +3569,14 @@ ul.autocompleter-choices span.kautocompleter-queried {
 	float: right
 }
 
+#Kunena a.back-to-top {
+	color: #ffffff;
+	font-weight: bold;
+	font-size: large;
+	text-shadow: 0 1px 3px black;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
 #Kunena span.kforummoderated {
 	background: url("../images/icons/tmoder.gif") no-repeat left center;
 	width: 16px;
