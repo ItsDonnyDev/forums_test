@@ -36,7 +36,7 @@ $gantry->init();
 		</head>
 		<body class="component-body">
 			<div class="component-content">
-		    	<jdoc:include type="message" />
+				<jdoc:include type="message" />
 				<jdoc:include type="component" />
 			</div>
 		</body>
