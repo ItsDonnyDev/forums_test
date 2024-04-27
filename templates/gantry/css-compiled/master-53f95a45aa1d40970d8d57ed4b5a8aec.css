@@ -1,5 +1,5 @@
 .clearfix {
-	*zoom: 1;
+	zoom: 1;
 }
 
 .clearfix:before,
@@ -941,9 +941,9 @@ html body * dd.clear {
 	list-style: none;
 }
 
-.control-label {
+/* .control-label {
 	color: ;
-}
+} */
 
 .control-group {
 	margin-left: 0 !important;
@@ -3047,7 +3047,7 @@ p.warning {
 	*margin-right: .3em;
 	text-decoration: inherit;
 	display: inline-block;
-	speak: none;
+	/* speak: none; */
 }
 
 .icon-large:before {
