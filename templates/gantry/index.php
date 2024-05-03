@@ -171,14 +171,6 @@ $gpreset = str_replace(' ','',strtolower($gantry->get('name')));
 			</div>
 		</div>
 		<?php /** End Footer **/ endif; ?>
-		<?php /** Begin Copyright **/ if ($gantry->countModules('copyright')) : ?>
-		<div id="rt-copyright">
-			<div class="rt-container" style="text-align: center; padding-top: 35px; margin-bottom: -35px; font-size: larger;">
-				<?php echo 'Powered by <a href="https://github.com/ItsDonnyDev" rel="follow" target="_blank">Donny</a>'; ?>
-				<div class="clear"></div>
-			</div>
-		</div>
-		<?php /** End Copyright **/ endif; ?>
 	</footer>
 	<?php /** End Footer Surround **/ endif; ?>
 	<?php /** Begin Debug **/ if ($gantry->countModules('debug')) : ?>
@@ -197,3 +189,22 @@ $gpreset = str_replace(' ','',strtolower($gantry->get('name')));
 <?php
 $gantry->finalize();
 ?>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var baseWidth = window.innerWidth;
+
+    window.addEventListener('resize', function() {
+        var currentWidth = window.innerWidth;
+        var zoomLevel = currentWidth / baseWidth;
+        var footer = document.getElementById('rt-copyright');
+
+        if (zoomLevel > 1) {
+            footer.style.position = 'fixed';
+            footer.style.bottom = '0';
+        } else {
+            footer.style.position = 'static';
+        }
+    });
+});
+</script>

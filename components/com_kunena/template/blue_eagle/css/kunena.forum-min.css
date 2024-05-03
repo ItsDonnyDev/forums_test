@@ -1230,7 +1230,7 @@
 	width: 18px;
 	display: inline-block;
 	margin: -25px 4px 0;
-	float: right
+	/* float: right */
 }
 
 #Kunena .ktitle,
@@ -1249,7 +1249,7 @@
 #Kunena div.kthead-title a {
 	font-size: .917em;
 	display: inline-block;
-	float: left;
+	/* float: left; */
 	padding-bottom: 0;
 	margin-bottom: 3px;
 	font-weight: bold
@@ -1312,7 +1312,7 @@
 }
 
 #Kunena div.kcc-subcat {
-	float: left;
+	/* float: left; */
 	display: inline-block;
 	vertical-align: top;
 	padding-top: 2px

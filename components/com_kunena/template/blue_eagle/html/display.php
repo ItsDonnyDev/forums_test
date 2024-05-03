@@ -22,9 +22,6 @@ $this->displayLayout();
 
 $this->displayBreadcrumb ();
 $this->displayFooter ();
-	echo '<div class="krss-block">';
-	echo '<a href="#" class="back-to-top">Back to Top</a>';
-	echo '</div>';
 ?>
 </div>
 
